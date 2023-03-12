@@ -18,9 +18,10 @@ public class VipTest extends TestBase{
     @Description("Проверка VIP")
     @DisplayName("Проверка VIP")
     void loginVipUser() {
-        step("Открываем главную страницу", () -> {
-            open("");
-        });
+
+        step("Открываем главную страницу", () ->
+            open("")
+        );
 
         step("Есть подпска выбираем", () -> {
             $(byText("Да")).click();
@@ -40,6 +41,7 @@ public class VipTest extends TestBase{
         step("Ввод смс кода", () -> {
         $("input", 0).setValue("00110");
         });
+
         step("Ввод фамилии", () -> {
         $("[name=lastName]").setValue("Тестиков");
         $(byText("Продолжить")).click();});
