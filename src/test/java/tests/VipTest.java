@@ -34,7 +34,7 @@ public class VipTest extends TestBase{
         });
 
         step("Ввод номера телефона", () -> {
-            $("input").setValue("9994657616").pressEnter();
+            $("input").setValue("9997334958").pressEnter();
             $(byText("Получить код")).click();
         });
 
