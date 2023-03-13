@@ -2,7 +2,6 @@ package tests;
 
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -16,13 +15,12 @@ import static io.qameta.allure.Allure.step;
 public class VipTest extends TestBase{
 
     @Test
-    @Tag("demowebshop")
-    @Description("Проверка VIP")
-    @DisplayName("Проверка VIP")
+    @Description("Check e2e for vip")
+    @DisplayName("e2e vip user")
     void loginVipUser() {
 
         step("Открываем главную страницу", () ->
-            open("")
+            open("https://web-lk-ift.website.cloud.croc.ru/")
         );
 
         step("Есть подпска выбираем", () -> {
