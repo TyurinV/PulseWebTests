@@ -23,13 +23,8 @@ public class RegistrationUser extends TestBase {
         $(byText("Продолжить")).click();
         $("h2").shouldHave(text("Какая страховая подписка вас интересует?"));
 
-        $(byText("Защита питомца")).click(); //попробывать byValue
+        $(byText("Защита питомца")).click();
         $(byText("Продолжить")).click();
         $("h2").shouldHave(text("Давайте знакомиться!"));
-
-
-
-
-        sleep(5000);
     }
 }
