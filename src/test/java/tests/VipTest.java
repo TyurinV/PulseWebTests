@@ -20,7 +20,7 @@ public class VipTest extends TestBase{
     void loginVipUser() {
 
         step("Открываем главную страницу", () ->
-            open("https://web-lk-ift.website.cloud.croc.ru/")
+            open("")
         );
 
         step("Есть подпска выбираем", () -> {

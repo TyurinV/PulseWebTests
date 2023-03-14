@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.Project;
@@ -31,6 +32,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         DriverSettings.configure();
+        Configuration.baseUrl = "https://web-lk-ift.website.cloud.croc.ru/";
     }
 
     @BeforeEach

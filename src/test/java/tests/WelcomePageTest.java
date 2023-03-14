@@ -17,7 +17,7 @@ public class WelcomePageTest extends TestBase {
     void welcomePageTest() {
 
         step("Открываем главную страницу", () ->
-                open("https://web-lk-ift.website.cloud.croc.ru/")
+                open("")
         );
         step("Проверяем приветствие", () ->
                 $("h1").shouldHave(Condition.text("Здравствуйте!"))

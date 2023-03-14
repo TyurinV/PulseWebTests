@@ -1,21 +1,18 @@
 package tests;
 
-import io.qameta.allure.junit5.AllureJunit5;
+import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 
-import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-@ExtendWith({AllureJunit5.class})
-public class TelephoneNumberPage extends TestBase {
+public class SmsPageTest extends TestBase {
 
     @Test
-    void wrongPhoneNumber(){
+    void checkErrorMassege() {
         step("Открываем главную страницу", () ->
                 open("")
         );
@@ -30,17 +27,17 @@ public class TelephoneNumberPage extends TestBase {
             $(byText("Продолжить")).click();
         });
 
-        step("Ввод ошибочный номер телефона", () -> {
-            $("input").setValue("1111111111").pressEnter();
+        step("Ввод номер телефона", () -> {
+            $("input").setValue("9991231234").pressEnter();
             $(byText("Получить код")).click();
         });
 
-        step("Отображение сообщения об ошибке - Неверный номер телефона ", () -> {
-        $("[type=tel]").parent().sibling(0).shouldHave(text("Неверный номер телефона"));
+        step("Ввод смс ошибочный кода", () -> {
+            $("input", 0).setValue("10110");
         });
 
-        step("Кнопка Назад существует", () -> {
-        $(byText("Назад")).shouldHave(visible);
+        step("Ввод смс ошибочный кода", () -> {
+            $(byText("Неверный код")).shouldBe(Condition.visible);
         });
     }
 }
