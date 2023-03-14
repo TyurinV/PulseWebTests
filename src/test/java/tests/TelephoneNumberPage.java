@@ -5,6 +5,7 @@ import io.qameta.allure.junit5.AllureJunit5;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
@@ -36,7 +37,11 @@ public class TelephoneNumberPage extends TestBase {
         });
 
         step("Отображение сообщения об ошибке - Неверный номер телефона ", () -> {
-        $("[type=tel]").parent().sibling(0).shouldHave(Condition.text("Неверный номер телефона"));
+        $("[type=tel]").parent().sibling(0).shouldHave(text("Неверный номер телефона"));
+        });
+
+        step("Кнопка Назад существует", () -> {
+        $(byText("Назад")).shouldHave(visible);
         });
     }
 }
