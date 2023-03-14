@@ -15,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 public class TelephoneNumberPage extends TestBase {
 
     @Test
-    void WrongPhoneNumber(){
+    void wrongPhoneNumber(){
         step("Открываем главную страницу", () ->
                 open("https://web-lk-ift.website.cloud.croc.ru/")
         );
