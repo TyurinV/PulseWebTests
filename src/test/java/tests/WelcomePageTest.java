@@ -1,13 +1,16 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.junit5.AllureJunit5;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+@ExtendWith({AllureJunit5.class})
 public class WelcomePageTest extends TestBase {
 
     @Test
