@@ -1,5 +1,6 @@
 package tests;
 
+import config.Project;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,6 +20,10 @@ public class VipTest extends TestBase{
     @DisplayName("e2e vip user")
     void loginVipUser() {
 
+
+
+
+
         step("Открываем главную страницу", () ->
             open("")
         );
@@ -34,7 +39,7 @@ public class VipTest extends TestBase{
         });
 
         step("Ввод номера телефона", () -> {
-            $("input").setValue("9994657616").pressEnter();
+            $("input").setValue(Project.config.loginVip()).pressEnter();
             $(byText("Получить код")).click();
         });
 
@@ -43,7 +48,7 @@ public class VipTest extends TestBase{
         });
 
         step("Ввод фамилии", () -> {
-        $("[name=lastName]").setValue("Тестиков");
+        $("[name=lastName]").setValue(Project.config.secondName());
         $(byText("Продолжить")).click();});
 
         step("Проверка финальной страницы", () -> {
