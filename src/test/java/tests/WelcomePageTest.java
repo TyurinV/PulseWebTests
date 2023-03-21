@@ -1,7 +1,9 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Description;
 import io.qameta.allure.junit5.AllureJunit5;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -14,6 +16,8 @@ import static io.qameta.allure.Allure.step;
 public class WelcomePageTest extends TestBase {
 
     @Test
+    @Description("welcome page test")
+    @DisplayName("welcome page test")
     void welcomePageTest() {
 
         step("Открываем главную страницу", () ->

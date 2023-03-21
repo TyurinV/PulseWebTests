@@ -1,6 +1,8 @@
 package tests;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.junit5.AllureJunit5;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -15,6 +17,8 @@ import static io.qameta.allure.Allure.step;
 public class TelephoneNumberPage extends TestBase {
 
     @Test
+    @Description("Check page whith tel number")
+    @DisplayName("Check page whith tel number")
     void wrongPhoneNumber(){
         step("Открываем главную страницу", () ->
                 open("")

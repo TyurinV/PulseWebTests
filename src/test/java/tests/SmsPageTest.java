@@ -1,7 +1,11 @@
 package tests;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Description;
+import io.qameta.allure.junit5.AllureJunit5;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
@@ -9,9 +13,12 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+@ExtendWith({AllureJunit5.class})
 public class SmsPageTest extends TestBase {
 
     @Test
+    @Description("Check error on sms input")
+    @DisplayName("Check error on sms input")
     void checkErrorMassege() {
         step("Открываем главную страницу", () ->
                 open("")

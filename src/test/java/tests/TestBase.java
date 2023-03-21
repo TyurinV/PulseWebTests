@@ -16,19 +16,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
-//    @BeforeAll
-//     static void setUp() {
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-//
-//        Configuration.baseUrl = "https://web-lk-ift.website.cloud.croc.ru/";
-//        Configuration.browserSize = "1920x1080";
-//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-//
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("enableVNC", true);
-//        capabilities.setCapability("enableVideo", false);
-//        Configuration.browserCapabilities = capabilities;
-//    }
+
     @BeforeAll
     static void beforeAll() {
         DriverSettings.configure();
@@ -56,12 +44,3 @@ public class TestBase {
         }
     }
 }
-
-//    @AfterEach
-//    void addAttachments() {
-//        AllureAttachments.addScreenshotAs("Last screenshot");
-//        AllureAttachments.addPageSource();
-//        AllureAttachments.addBrowserConsoleLogs();
-////        Attach.addVideo();
-//        closeWebDriver();
-//    }
