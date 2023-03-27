@@ -2,6 +2,7 @@ package tests;
 
 import config.Project;
 import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import io.qameta.allure.junit5.AllureJunit5;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -21,6 +22,7 @@ public class VipTest extends TestBase{
     @Test
     @Description("Check e2e for vip")
     @DisplayName("e2e vip user")
+    @Story("Полное флоу поведения ВИП пользователя")
     void loginVipUser() {
 
 
@@ -56,7 +58,7 @@ public class VipTest extends TestBase{
 
         step("Проверка финальной страницы", () -> {
         $("button").shouldHave(text("Скачать приложение"));
-        $(byText("Поздравляем, Дмитрий!")).shouldBe(visible);
+        $(byText("Поздравляем, Владимир!")).shouldBe(visible);
         $(withText("Как привилегированному клиенту СК «Пульс», вам доступны особые условия подписки" +
                 " на защиту в нашем приложении «Пульс Жизни»")).shouldBe(visible);
         });
