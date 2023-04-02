@@ -119,3 +119,10 @@ Report*</strong></code>, кликнув по которому, откроетс�
 <p align="center">
   <img src="images/screen/AllureReport.png" alt="Allure Report" width="900">
 </p>
+
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+
+> К каждому тесту в отчете прилагается видео.
+<p align="center">
+  <img title="Selenoid Video" src="images/gif/selenide2.gif">
+</p>
