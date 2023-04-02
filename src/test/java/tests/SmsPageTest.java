@@ -35,7 +35,7 @@ public class SmsPageTest extends TestBase {
         });
 
         step("Ввод номер телефона", () -> {
-            $("input").setValue("9991231234").pressEnter();
+            $("input").setValue("9991231235");
             $(byText("Получить код")).click();
         });
 

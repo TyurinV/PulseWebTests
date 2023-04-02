@@ -44,7 +44,7 @@ public class VipTest extends TestBase{
         });
 
         step("Ввод номера телефона", () -> {
-            $("input").setValue(Project.config.loginVip()).pressEnter();
+            $("input").setValue(Project.config.loginVip());
             $(byText("Получить код")).click();
         });
 
