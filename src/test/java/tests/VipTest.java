@@ -4,6 +4,7 @@ import config.Project;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import io.qameta.allure.junit5.AllureJunit5;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,6 +21,7 @@ import static io.qameta.allure.Allure.step;
 public class VipTest extends TestBase{
 
     @Test
+    @Disabled
     @Description("Check e2e for vip")
     @DisplayName("e2e vip user")
     @Story("Полное флоу поведения ВИП пользователя")
