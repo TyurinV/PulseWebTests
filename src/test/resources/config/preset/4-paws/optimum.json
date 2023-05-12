@@ -1,0 +1,12 @@
+{
+  "risks": [
+    {
+      "code": "Pet_1",
+      "defaultInsuranceSum": "30000"
+    },
+    {
+      "code": "Pet_2",
+      "defaultInsuranceSum": "30000"
+    }
+  ]
+}

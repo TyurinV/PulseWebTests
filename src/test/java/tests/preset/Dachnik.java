@@ -1,10 +1,11 @@
-package tests;
+package tests.preset;
 
 import com.codeborne.selenide.Condition;
 import config.Project;
 import io.qameta.allure.junit5.AllureJunit5;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import tests.TestBase;
 
 import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Selectors.byText;
@@ -91,8 +92,6 @@ public class Dachnik extends TestBase {
             $(byText("Дополнительные риски")).sibling(0).shouldHave(Condition.text("Не выбраны"));
             $(byText("Максимальная сумма возмещения")).sibling(0).shouldHave(Condition.text("45 000 ₽"));
         });
-
-        sleep(5000);
-
+        //todo max case e2e
     }
 }

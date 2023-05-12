@@ -1,0 +1,33 @@
+{
+  "buildingMaterial": "WOOD",
+  "subObjects": [
+    {
+      "code": "CONSTRUCTION",
+      "defaultInsuranceSum": "5700000"
+    },
+    {
+      "code": "DECORATION",
+      "defaultInsuranceSum": "600000"
+    },
+    {
+      "code": "MOVABLES",
+      "defaultInsuranceSum": "800000"
+    },
+    {
+      "code": "Liability_1",
+      "defaultInsuranceSum": "0"
+    },
+    {
+      "code": "BUILDING",
+      "defaultInsuranceSum": "0"
+    }
+  ],
+  "risks": [
+    "Property_1",
+    "Property_2",
+    "Property_3",
+    "Property_4",
+    "Property_5",
+    "Property_6"
+  ]
+}

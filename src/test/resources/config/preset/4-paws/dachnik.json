@@ -1,0 +1,16 @@
+{
+  "petKinds": [
+    "CAT",
+    "DOG"
+  ],
+  "risks": [
+    {
+      "code": "Pet_2",
+      "defaultInsuranceSum": "30000"
+    },
+    {
+      "code": "Pet_3",
+      "defaultInsuranceSum": "15000"
+    }
+  ]
+}
