@@ -1,1 +1,9 @@
-{   "petKind": "FERRET",   "risks": [     {       "code": "Pet_2",       "defaultInsuranceSum": "15000"     }   ] }
+{
+  "petKind": "FERRET",
+  "risks": [
+    {
+      "code": "Pet_2",
+      "defaultInsuranceSum": "15000"
+    }
+  ]
+}

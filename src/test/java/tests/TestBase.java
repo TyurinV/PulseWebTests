@@ -20,7 +20,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         DriverSettings.configure();
-        Configuration.baseUrl = "https://web-lk-ift.website.cloud.croc.ru/";
+//        Configuration.baseUrl = Project.config.baseUrl();
     }
 
     @BeforeEach

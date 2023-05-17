@@ -1,1 +1,9 @@
-{   "petKind": "CHINCHILLA",   "risks": [     {       "code": "Pet_2",       "defaultInsuranceSum": "15000"     }   ] }
+{
+  "petKind": "CHINCHILLA",
+  "risks": [
+    {
+      "code": "Pet_2",
+      "defaultInsuranceSum": "15000"
+    }
+  ]
+}

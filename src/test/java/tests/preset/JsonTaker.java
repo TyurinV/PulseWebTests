@@ -1,7 +1,5 @@
 package tests.preset;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v113.network.Network;
@@ -11,7 +9,6 @@ import java.net.URL;
 import java.util.Optional;
 
 import static com.codeborne.selenide.Selenide.sleep;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JsonTaker {
     public static String getPresetUrl() {
@@ -20,17 +17,7 @@ public class JsonTaker {
 
     private static String presetUrl;
 
-    @Test
-    void maintest() throws IOException {
-        JsonTaker jsonTaker = new JsonTaker();
-        jsonTaker.sometest("https://web-lk-pulse-dev.website.cloud.croc.ru/?product=pets&preset=dachnik&personalization=4-paws_base");
-        ObjectMapper mapper = new ObjectMapper();
-        System.out.println(mapper.readTree(stream(presetUrl)));
-        System.out.println(mapper.readTree(new File("src/test/resources/config/preset/dachnik.json")));
-        assertEquals(mapper.readTree(stream(presetUrl)), mapper.readTree(new File("src/test/resources/config/preset/dachnik.json")));
-    }
-
-    public String sometest(String url) {
+    public String getPresetJson(String url) {
         ChromeDriver driver = new ChromeDriver();
         DevTools devTools = driver.getDevTools();
 
@@ -50,6 +37,7 @@ public class JsonTaker {
 
     public static String stream(String string) {
         URL url;
+
         try {
             url = new URL(string);
             InputStream input = url.openStream();

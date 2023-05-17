@@ -1,0 +1,1 @@
+{   "petKind": "DOG",   "risks": [     {       "code": "Pet_1",       "defaultInsuranceSum": "40000"     },     {       "code": "Pet_2",       "defaultInsuranceSum": "50000"     },     {       "code": "Pet_3",       "defaultInsuranceSum": "20000"     },     {       "code": "Pet_4",       "defaultInsuranceSum": "15000"     }   ] }

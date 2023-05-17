@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @ExtendWith({AllureJunit5.class})
-public class VipTest extends TestBase{
+public class VipTest extends TestBase {
 
     @Test
     @Description("Check e2e for vip")
@@ -25,12 +25,8 @@ public class VipTest extends TestBase{
     @Story("Полное флоу поведения ВИП пользователя")
     void loginVipUser() {
 
-
-
-
-
         step("Открываем главную страницу", () ->
-            open("")
+                open("")
         );
 
         step("Есть подпска выбираем", () -> {
@@ -49,18 +45,19 @@ public class VipTest extends TestBase{
         });
 
         step("Ввод смс кода", () -> {
-        $("input", 0).setValue("00110");
+            $("input", 0).setValue("00110");
         });
 
         step("Ввод фамилии", () -> {
-        $("[name=lastName]").setValue(Project.config.secondName());
-        $(byText("Продолжить")).click();});
+            $("[name=lastName]").setValue(Project.config.secondName());
+            $(byText("Продолжить")).click();
+        });
 
         step("Проверка финальной страницы", () -> {
-        $("button").shouldHave(text("Скачать приложение"));
-        $(byText("Поздравляем, Владимир!")).shouldBe(visible);
-        $(withText("Как привилегированному клиенту СК «Пульс», вам доступны особые условия подписки" +
-                " на защиту в нашем приложении «Пульс Жизни»")).shouldBe(visible);
+            $("button").shouldHave(text("Скачать приложение"));
+            $(byText("Поздравляем, Владимир!")).shouldBe(visible);
+            $(withText("Как привилегированному клиенту СК «Пульс», вам доступны особые условия подписки" +
+                    " на защиту в нашем приложении «Пульс Жизни»")).shouldBe(visible);
         });
     }
 }
