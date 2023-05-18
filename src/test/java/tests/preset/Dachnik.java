@@ -25,7 +25,7 @@ public class Dachnik extends TestBase {
     @Test
     void checkDanikPreset() {
         step("Открываем главную страницу?", () ->
-                open("/?product=pets&preset=dachnik&personalization=4-paws_base")
+                open("?product=pets&preset=dachnik&personalization=4-paws_base")
         );
 
         step("Ввод ошибочный номер телефона", () -> {
